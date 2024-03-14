@@ -11,19 +11,21 @@
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
 
-let result = ;
-
-
+let result = story
+  .replace("dogs", "cats")
+  .replace("One day", "One night")
+  .replace("10 dogs", "100000 cats")
+  .replace("great day", "brilliant night");
 
 /* =========================
  DO NOT CHANGE BELOW CODES
 ===========================-*/
 
 function test(test_name, actual, expected) {
-  console.log('');
+  console.log("");
   let status;
   if (actual === expected) {
-    status = 'PASSED';
+    status = "PASSED";
   } else {
     status = `FAILED: \nexpected: ${expected} \nbut your function returned: ${actual}`;
   }
@@ -32,13 +34,13 @@ function test(test_name, actual, expected) {
 }
 
 test(
-  '1. Original story has not been changed',
+  "1. Original story has not been changed",
   story,
-  'I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.'
+  "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day."
 );
 
 test(
-  '2. The result of the replace is correct',
+  "2. The result of the replace is correct",
   result,
-  'I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night.'
+  "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night."
 );

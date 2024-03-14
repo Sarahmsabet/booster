@@ -8,11 +8,19 @@
     if she is none of above, print out "Hi Shaden, you should join APS"
 */
 
-let yourName = 'Shaden';
-let yourRole = 'mentor';
+let yourName = "Shaden";
+let yourRole = "mentor";
 
 //your code here//
-
+if (yourRole === "mentor") {
+  console.log("Hi Shaden, you are a mentor");
+} else if (yourRole === "student") {
+  console.log("Hi Shaden, you are a student");
+} else if (yourRole === "teacher") {
+  console.log("Hi Shaden, you are a teacher");
+} else {
+  console.log("Hi Shaden, you should join APS");
+}
 
 ///
 
