@@ -6,26 +6,26 @@
 */
 
 let everyone = [
-    "Bahar",
-    "Fatemeh",
-    "Mahjan",
-    "Arad",
-    "Pedram",
-    "AmirMostafa",
-    "Mohsen",
-  ];
-  
-  let firstFive; // complete this statement
-  let lastFive; // complete this statement
-  
-  /* 
+  "Bahar",
+  "Fatemeh",
+  "Mahjan",
+  "Arad",
+  "Pedram",
+  "AmirMostafa",
+  "Mohsen",
+];
+
+let firstFive = everyone.slice(0, 5); // complete this statement
+let lastFive = everyone.slice(2, 7); // complete this statement
+
+/* 
     DO NOT EDIT BELOW THIS LINE
     --------------------------- */
-  
-  console.log(firstFive);
-  console.log(lastFive);
-  
-  /* 
+
+console.log(firstFive);
+console.log(lastFive);
+
+/* 
     EXPECTED RESULT
     ---------------
     ["Bahar", "Fatemeh", "Mahjan", "Arad", "Pedram"]

@@ -17,20 +17,26 @@
   In step 2, you solved the problem without using functions. However, for better practice, you should utilize the provided functions to achieve the same result
 */
 
-function add() {}
+function add(num1, num2) {
+  return num1 + num2;
+}
 
-function multiply() {}
+function multiply(num1, num2) {
+  return num1 * num2;
+}
 
-function format() {}
+function format(num) {
+  return `£${num}`;
+}
 
 const startingValue = 2;
 
-// Why can this code be seen as bad practice? Comment your answer.
-let badCode;
-
+// Why can this code be seen as bad practice? Comment your answer. there is no functionality in it
+let next = (startingValue + 10) * 2;
+let badCode = `£${next}`;
 /* BETTER PRACTICE */
 
-let goodCode;
+let goodCode = `£${(startingValue + 10) * 2}`;
 
 /* ======= TESTS - DO NOT MODIFY ===== 
 There are some Tests in this file that will help you work out if your code is working.
@@ -40,7 +46,7 @@ There are some Tests in this file that will help you work out if your code is wo
 function test(test_name, actual, expected) {
   let status;
   if (actual === expected) {
-    status = 'PASSED';
+    status = "PASSED";
   } else {
     status = `FAILED: expected: ${expected} but your code returned: ${actual}`;
   }
@@ -48,9 +54,9 @@ function test(test_name, actual, expected) {
   console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1, 3), 4);
-test('add function - case 2 works', add(2.4, 5), 7.4);
-test('multiply function works', multiply(2, 3), 6);
-test('format function works', format(16), '£16');
-test('badCode variable correctly assigned', badCode, '£24');
-test('goodCode variable correctly assigned', goodCode, '£24');
+test("add function - case 1 works", add(1, 3), 4);
+test("add function - case 2 works", add(2.4, 5), 7.4);
+test("multiply function works", multiply(2, 3), 6);
+test("format function works", format(16), "£16");
+test("badCode variable correctly assigned", badCode, "£24");
+test("goodCode variable correctly assigned", goodCode, "£24");

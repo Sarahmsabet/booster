@@ -8,7 +8,11 @@
  */
 
 function isEmpty(arr) {
-  return ; // complete this statement
+  if (arr.length === 0) {
+    return true; // complete this statement
+  } else {
+    return false;
+  }
 }
 
 /* 
@@ -26,4 +30,4 @@ console.log(isEmpty(names));
   false
   true
 */
-export default isEmpty;
+// export default isEmpty;

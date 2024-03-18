@@ -10,31 +10,47 @@
 
 // the function should return true if num was negative otherwise return false
 function isNegative(num) {
-  return;
+  if (num < 0) {
+    return "Yes it is a negative number.";
+  } else {
+    return "No it is a positive number.";
+  }
 }
 
-// the function should return true if num wwas between 5 and 10 otherwise return false
+// the function should return true if num was between 5 and 10 otherwise return false
 function isBetween5and10(num) {
-  return;
+  if (num >= 5 && num <= 10) {
+    return "Yes it is between 5 and 10.";
+  } else {
+    return "No it isn't between 5 and 10.";
+  }
 }
 
 // check the characters if they are less than 10
 function isShortName(name) {
-  return;
+  if (name.length < 10) {
+    return "Yes it is.";
+  } else {
+    return "No it isn't.";
+  }
 }
 
 function startsWithD(name) {
-  return;
+  if (name[0] === "D") {
+    return "Yes it does.";
+  } else {
+    return "No it doesn't.";
+  }
 }
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 
-console.log('Is -10 is a negative number?', isNegative(-10));
-console.log('Is 5 a negative number?', isNegative(5));
-console.log('Is 10 in the range 5-10?', isBetween5and10(10));
-console.log('Is Daniel a short name?', isShortName('Daniel'));
-console.log("Does Daniel start with 'D'?", startsWithD('Daniel'));
+console.log("Is -10 is a negative number?", isNegative(-10));
+console.log("Is 5 a negative number?", isNegative(5));
+console.log("Is 10 in the range 5-10?", isBetween5and10(10));
+console.log("Is Daniel a short name?", isShortName("Daniel"));
+console.log("Does Daniel start with 'D'?", startsWithD("Daniel"));
 
 /* 
   EXPECTED RESULT
@@ -45,4 +61,4 @@ console.log("Does Daniel start with 'D'?", startsWithD('Daniel'));
   Is Daniel a short name? true
   Does Daniel start with 'D'? true
 */
-export { isBetween5and10, isShortName, startsWithD };
+// export { isBetween5and10, isShortName, startsWithD };

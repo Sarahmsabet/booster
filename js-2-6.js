@@ -9,7 +9,9 @@
  */
 
 function calculateSalesTax(price) {
-  return;
+  let salesTax = (price * 20) / 100;
+  let totalIs = price + salesTax;
+  return totalIs;
 }
 
 /*
@@ -23,7 +25,9 @@ function calculateSalesTax(price) {
 */
 
 function addTaxAndFormatCurrency(price) {
-  return;
+  let salesTax = (price * 20) / 100;
+  let totalIs = price + salesTax;
+  return `£${totalIs.toFixed(2)}`;
 }
 
 ////////////////////////
@@ -37,12 +41,12 @@ There are some Tests in this file that will help you work out if your code is wo
 
 ===================================================
 */
-export { calculateSalesTax, addTaxAndFormatCurrency };
+// export { calculateSalesTax, addTaxAndFormatCurrency };
 
 function test(test_name, actual, expected) {
   let status;
   if (actual === expected) {
-    status = 'PASSED';
+    status = "PASSED";
   } else {
     status = `FAILED: expected: ${expected} but your function returned: ${actual}`;
   }
@@ -50,22 +54,22 @@ function test(test_name, actual, expected) {
   console.log(`${test_name}: ${status}`);
 }
 
-test('calculateSalesTax function - case 1 works', calculateSalesTax(15), 18);
-test('calculateSalesTax function - case 2 works', calculateSalesTax(17.5), 21);
-test('calculateSalesTax function - case 3 works', calculateSalesTax(34), 40.8);
+test("calculateSalesTax function - case 1 works", calculateSalesTax(15), 18);
+test("calculateSalesTax function - case 2 works", calculateSalesTax(17.5), 21);
+test("calculateSalesTax function - case 3 works", calculateSalesTax(34), 40.8);
 
 test(
-  'addTaxAndFormatCurrency function - case 1 works',
+  "addTaxAndFormatCurrency function - case 1 works",
   addTaxAndFormatCurrency(15),
-  '£18.00'
+  "£18.00"
 );
 test(
-  'addTaxAndFormatCurrency function - case 2 works',
+  "addTaxAndFormatCurrency function - case 2 works",
   addTaxAndFormatCurrency(17.5),
-  '£21.00'
+  "£21.00"
 );
 test(
-  'addTaxAndFormatCurrency function - case 3 works',
+  "addTaxAndFormatCurrency function - case 3 works",
   addTaxAndFormatCurrency(34),
-  '£40.80'
+  "£40.80"
 );
